@@ -84,6 +84,14 @@
       font-weight: 700;
       text-shadow: 0 0 10px var(--glow-red);
       box-shadow: 0 0 20px rgba(255, 31, 68, 0.3);
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
     }
 
     h1 {
@@ -191,7 +199,8 @@
     }
 
     .roblox-icon svg {
-      transform: rotate(-15deg);
+      width: 28px;
+      height: 28px;
     }
 
     .namemc-icon svg {
@@ -270,7 +279,9 @@
 </head>
 <body>
   <main class="container">
-    <div class="avatar" aria-hidden="true">J</div>
+    <div class="avatar">
+      <img src="563848924_17926281492132582_4505738337428840039_n.jpg" alt="Johm profile picture">
+    </div>
 
     <h1>Johm</h1>
     <div class="status"><span>//</span> online_and_active</div>
@@ -302,8 +313,16 @@
 
       <a href="https://www.roblox.com/user.aspx?username=DocJohm" target="_blank" rel="noopener noreferrer" class="link-card">
         <span class="custom-icon roblox-icon" aria-hidden="true">
-          <svg viewBox="0 0 100 100" role="img">
-            <path fill-rule="evenodd" d="M20 20h60v60H20V20Zm27 27v18h18V47H47Z"></path>
+          <svg viewBox="0 0 32 32" role="img">
+            <defs>
+              <mask id="roblox-cutout">
+                <rect width="32" height="32" fill="white"></rect>
+                <rect x="13" y="13" width="6" height="6" fill="black"></rect>
+              </mask>
+            </defs>
+            <g transform="rotate(-15 16 16)" mask="url(#roblox-cutout)">
+              <rect x="6" y="6" width="20" height="20" rx="1"></rect>
+            </g>
           </svg>
         </span>
         <span class="link-title">Roblox</span>

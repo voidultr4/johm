@@ -18,6 +18,7 @@ Each link opens the matching contact or social profile.
 ## Files
 
 - `index.html` - the full website
+- `563848924_17926281492132582_4505738337428840039_n.jpg` - profile picture
 - `README.md` - information about this project
 - `.gitignore` - ignores common system files
 
