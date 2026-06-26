@@ -13,7 +13,7 @@ This site includes quick links for:
 - Roblox
 - Minecraft
 
-Some links open the social profile directly, while Discord and Minecraft copy the username to the clipboard.
+Each link opens the matching contact or social profile.
 
 ## Files
 

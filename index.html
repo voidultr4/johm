@@ -130,11 +130,27 @@
       font: inherit;
     }
 
-    .link-card i {
+    .link-card i,
+    .custom-icon {
       font-size: 1.3rem;
       width: 30px;
       color: var(--text-dim);
-      transition: color 0.3s;
+      transition: color 0.3s, filter 0.3s;
+      flex: 0 0 30px;
+    }
+
+    .custom-icon {
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+      fill: currentColor;
     }
 
     .link-title {
@@ -166,9 +182,16 @@
     }
 
     .link-card:hover i,
-    .link-card:focus-visible i {
+    .link-card:focus-visible i,
+    .link-card:hover .custom-icon,
+    .link-card:focus-visible .custom-icon {
       color: var(--glow-red);
       text-shadow: 0 0 5px var(--glow-red);
+      filter: drop-shadow(0 0 5px var(--glow-red));
+    }
+
+    .roblox-icon svg {
+      transform: rotate(-15deg);
     }
 
     .toast {
@@ -207,6 +230,13 @@
       font-size: 0.75rem;
       color: var(--text-dim);
       letter-spacing: 1px;
+      line-height: 1.7;
+    }
+
+    footer strong {
+      color: var(--text-color);
+      font-weight: 700;
+      text-shadow: 0 0 8px rgba(255, 31, 68, 0.45);
     }
 
     @media (max-width: 420px) {
@@ -238,11 +268,11 @@
         <span class="link-value">Contact</span>
       </a>
 
-      <button class="link-card" type="button" data-copy="Doc1233_17105" data-message="Discord handle copied!">
+      <a href="https://discord.com/users/1143543978977935373" target="_blank" rel="noopener noreferrer" class="link-card">
         <i class="fa-brands fa-discord" aria-hidden="true"></i>
         <span class="link-title">Discord</span>
-        <span class="link-value">Doc1233_17105</span>
-      </button>
+        <span class="link-value">Profile</span>
+      </a>
 
       <a href="https://www.tiktok.com/@Johmmy.io" target="_blank" rel="noopener noreferrer" class="link-card">
         <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
@@ -257,19 +287,30 @@
       </a>
 
       <a href="https://www.roblox.com/user.aspx?username=DocJohm" target="_blank" rel="noopener noreferrer" class="link-card">
-        <i class="fa-solid fa-cube" aria-hidden="true"></i>
+        <span class="custom-icon roblox-icon" aria-hidden="true">
+          <svg viewBox="0 0 100 100" role="img">
+            <path d="M18 18h64v64H18V18Zm30 26v16h16V44H48Z"></path>
+          </svg>
+        </span>
         <span class="link-title">Roblox</span>
         <span class="link-value">DocJohm</span>
       </a>
 
-      <button class="link-card" type="button" data-copy="NahIamJohm" data-message="Minecraft IGN copied!">
-        <i class="fa-solid fa-cubes" aria-hidden="true"></i>
+      <a href="https://namemc.com/search?q=NahIAmJohm" target="_blank" rel="noopener noreferrer" class="link-card">
+        <span class="custom-icon minecraft-icon" aria-hidden="true">
+          <svg viewBox="0 0 100 100" role="img">
+            <path d="M18 18h64v24H42v40H18V18Zm58 24h12v40H64V42h12Z"></path>
+          </svg>
+        </span>
         <span class="link-title">Minecraft</span>
-        <span class="link-value">NahIamJohm</span>
-      </button>
+        <span class="link-value">NahIAmJohm</span>
+      </a>
     </div>
 
-    <footer>[ REMODEL.V2 // 2026 ]</footer>
+    <footer>
+      [ REMODEL.V2 // 2026 ]<br>
+      MADE BY <strong>voidultr4</strong>
+    </footer>
   </main>
 
   <div id="toast" class="toast" role="status" aria-live="polite">Copied to system!</div>
