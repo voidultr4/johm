@@ -147,8 +147,8 @@
     }
 
     .custom-icon svg {
-      width: 22px;
-      height: 22px;
+      width: 26px;
+      height: 26px;
       display: block;
       fill: currentColor;
     }
@@ -194,6 +194,11 @@
       transform: rotate(-15deg);
     }
 
+    .namemc-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
     .toast {
       position: fixed;
       bottom: -70px;
@@ -233,10 +238,19 @@
       line-height: 1.7;
     }
 
-    footer strong {
+    footer a {
       color: var(--text-color);
       font-weight: 700;
+      text-decoration: none;
       text-shadow: 0 0 8px rgba(255, 31, 68, 0.45);
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    footer a:hover,
+    footer a:focus-visible {
+      color: var(--glow-red);
+      outline: none;
+      text-shadow: 0 0 10px var(--glow-red);
     }
 
     @media (max-width: 420px) {
@@ -289,7 +303,7 @@
       <a href="https://www.roblox.com/user.aspx?username=DocJohm" target="_blank" rel="noopener noreferrer" class="link-card">
         <span class="custom-icon roblox-icon" aria-hidden="true">
           <svg viewBox="0 0 100 100" role="img">
-            <path d="M18 18h64v64H18V18Zm30 26v16h16V44H48Z"></path>
+            <path fill-rule="evenodd" d="M20 20h60v60H20V20Zm27 27v18h18V47H47Z"></path>
           </svg>
         </span>
         <span class="link-title">Roblox</span>
@@ -297,19 +311,21 @@
       </a>
 
       <a href="https://namemc.com/search?q=NahIAmJohm" target="_blank" rel="noopener noreferrer" class="link-card">
-        <span class="custom-icon minecraft-icon" aria-hidden="true">
+        <span class="custom-icon namemc-icon" aria-hidden="true">
           <svg viewBox="0 0 100 100" role="img">
-            <path d="M18 18h64v24H42v40H18V18Zm58 24h12v40H64V42h12Z"></path>
+            <rect x="18" y="22" width="20" height="56"></rect>
+            <rect x="18" y="22" width="42" height="20"></rect>
+            <rect x="60" y="42" width="20" height="36"></rect>
           </svg>
         </span>
         <span class="link-title">Minecraft</span>
-        <span class="link-value">NahIAmJohm</span>
+        <span class="link-value">NameMC</span>
       </a>
     </div>
 
     <footer>
       [ REMODEL.V2 // 2026 ]<br>
-      MADE BY <strong>voidultr4</strong>
+      MADE BY <a href="https://voidultr4.github.io/" target="_blank" rel="noopener noreferrer">voidultr4</a>
     </footer>
   </main>
 
