@@ -239,7 +239,30 @@
       }
     }
 
-    .site-footer {
+    .made-by {
+      margin-top: 40px;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      line-height: 1.7;
+    }
+
+    .made-by a {
+      color: var(--text-color);
+      font-weight: 700;
+      text-decoration: none;
+      text-shadow: 0 0 8px rgba(255, 31, 68, 0.45);
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    .made-by a:hover,
+    .made-by a:focus-visible {
+      color: var(--glow-red);
+      outline: none;
+      text-shadow: 0 0 10px var(--glow-red);
+    }
+
+    .bottom-credit {
       position: fixed;
       left: 48px;
       bottom: 24px;
@@ -248,21 +271,6 @@
       color: var(--text-dim);
       letter-spacing: 1px;
       line-height: 1.7;
-    }
-
-    .site-footer a {
-      color: var(--text-color);
-      font-weight: 700;
-      text-decoration: none;
-      text-shadow: 0 0 8px rgba(255, 31, 68, 0.45);
-      transition: color 0.3s, text-shadow 0.3s;
-    }
-
-    .site-footer a:hover,
-    .site-footer a:focus-visible {
-      color: var(--glow-red);
-      outline: none;
-      text-shadow: 0 0 10px var(--glow-red);
     }
 
     @media (max-width: 420px) {
@@ -278,7 +286,7 @@
         align-items: flex-start;
       }
 
-      .site-footer {
+      .bottom-credit {
         left: 20px;
         bottom: 16px;
       }
@@ -350,11 +358,12 @@
       </a>
     </div>
 
+    <div class="made-by">
+      MADE BY <a href="https://voidultr4.github.io/" target="_blank" rel="noopener noreferrer">voidultr4</a>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    © 2026 <a href="https://voidultr4.github.io/" target="_blank" rel="noopener noreferrer">voidultr4</a>
-  </footer>
+  <div class="bottom-credit">@ 2026 voidultr4</div>
 
   <div id="toast" class="toast" role="status" aria-live="polite">Copied to system!</div>
 
