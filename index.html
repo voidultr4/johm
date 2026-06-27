@@ -239,15 +239,18 @@
       }
     }
 
-    footer {
-      margin-top: 40px;
+    .site-footer {
+      position: fixed;
+      left: 48px;
+      bottom: 24px;
+      z-index: 3;
       font-size: 0.75rem;
       color: var(--text-dim);
       letter-spacing: 1px;
       line-height: 1.7;
     }
 
-    footer a {
+    .site-footer a {
       color: var(--text-color);
       font-weight: 700;
       text-decoration: none;
@@ -255,8 +258,8 @@
       transition: color 0.3s, text-shadow 0.3s;
     }
 
-    footer a:hover,
-    footer a:focus-visible {
+    .site-footer a:hover,
+    .site-footer a:focus-visible {
       color: var(--glow-red);
       outline: none;
       text-shadow: 0 0 10px var(--glow-red);
@@ -273,6 +276,11 @@
 
       .link-card {
         align-items: flex-start;
+      }
+
+      .site-footer {
+        left: 20px;
+        bottom: 16px;
       }
     }
   </style>
@@ -342,10 +350,11 @@
       </a>
     </div>
 
-    <footer>
-      @ 2026 <a href="https://voidultr4.github.io/" target="_blank" rel="noopener noreferrer">voidultr4</a>
-    </footer>
   </main>
+
+  <footer class="site-footer">
+    © 2026 <a href="https://voidultr4.github.io/" target="_blank" rel="noopener noreferrer">voidultr4</a>
+  </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite">Copied to system!</div>
 
