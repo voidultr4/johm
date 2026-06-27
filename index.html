@@ -28,6 +28,7 @@
       color: var(--text-color);
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       overflow-x: hidden;
@@ -263,14 +264,15 @@
     }
 
     .bottom-credit {
-      position: fixed;
-      left: 48px;
-      bottom: 24px;
+      width: 100%;
+      max-width: 500px;
+      margin-top: 80px;
       z-index: 3;
       font-size: 0.75rem;
       color: var(--text-dim);
       letter-spacing: 1px;
       line-height: 1.7;
+      text-align: left;
     }
 
     @media (max-width: 420px) {
@@ -287,8 +289,7 @@
       }
 
       .bottom-credit {
-        left: 20px;
-        bottom: 16px;
+        margin-top: 64px;
       }
     }
   </style>
